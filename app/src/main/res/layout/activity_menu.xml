@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#17CED4"
+    android:orientation="vertical"
+    tools:context=".MenuActivity">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Menu Principal"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="#17CED4"
+                android:background="#17CED4"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:visibility="visible"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:onClick="abrirBuscar"
+                        android:id="@+id/AbrirBuscar"
+                        android:src="@drawable/logo_app">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buscar"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="30dp"
+                app:cardBackgroundColor="#17CED4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/BtnSocial"
+                        android:onClick="AbrirRedeSocial"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/pets_app">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rede Social"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="#17CED4"
+                android:layout_width="170dp"
+                android:layout_height="170dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:onClick="AbrirPefil"
+                        android:id="@+id/AbrirPerfil"
+                        android:src="@drawable/cao_app">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perfil"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="#17CED4"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:onClick="AbrirConfig"
+                        android:id="@+id/AbrirConfig"
+                        android:src="@drawable/gatos_app">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Configurações"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAdotar"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:text="Adotar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:backgroundTint="@color/black">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnSair"
+                android:layout_width="180dp"
+                android:layout_height="63dp"
+                android:layout_marginLeft="20dp"
+                android:text="Sair"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:backgroundTint="@color/black">
+
+            </Button>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
