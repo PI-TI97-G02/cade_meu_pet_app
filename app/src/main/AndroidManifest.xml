@@ -11,8 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CadêMeuPet"
         tools:ignore="AllowBackup">
-        <activity android:name=".BuscarActivity"></activity>
-        <activity android:name=".SocialActivity"></activity>
+        <activity android:name=".PerfilActivity"></activity>
+        <activity android:name=".BuscarActivity" />
+        <activity android:name=".SocialActivity" />
         <activity android:name=".RecuperarUsuActivity" />
         <activity android:name=".TermosdeUsoActivity" />
         <activity android:name=".MenuActivity" />

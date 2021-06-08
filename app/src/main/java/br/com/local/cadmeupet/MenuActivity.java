@@ -29,6 +29,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void AbrirPefil(View view) {
+        startActivity(new Intent(MenuActivity.this, PerfilActivity.class));
     }
 
     public void AbrirConfig(View view) {

@@ -15,6 +15,21 @@
         app:showAsAction="always">
 
     </item>
+    <item
+        android:title="Compartilhar"
+        app:showAsAction="always"
+        android:id="@+id/msCompartilhar"
+        android:icon="@drawable/ic_baseline_share_">
+
+    </item>
+
+    <item
+        android:title="Voltar"
+        app:showAsAction="always"
+        android:id="@+id/msVoltar"
+        android:icon="@drawable/ic_baseline_arrow_backss_">
+
+    </item>
 
 
 </menu>
