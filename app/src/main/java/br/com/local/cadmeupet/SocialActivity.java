@@ -57,12 +57,6 @@ public class SocialActivity extends AppCompatActivity {
                         "Cliquei em pesquisar",
                         Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.msCompartilhar:
-                Toast.makeText(getApplicationContext(),
-
-                        "Cliquei em Compartilhar",
-                        Toast.LENGTH_SHORT).show();
-                break;
             case R.id.msVoltar:
                 startActivity(new Intent(SocialActivity.this, MenuActivity.class));
 
@@ -72,6 +66,7 @@ public class SocialActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
     public class MyAdapter extends BaseAdapter {
 
@@ -92,9 +87,9 @@ public class SocialActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView imgPets;
+            ImageView imgPets, imgSocialLike;
             TextView txtTituloImagem, txtDescricaoRaca;
-            Button btnCurtir;
+
 
 
             View view = getLayoutInflater().inflate(R.layout.modelo_lista_pets, null);
@@ -104,6 +99,9 @@ public class SocialActivity extends AppCompatActivity {
             imgPets.setImageResource(imagemPets[position]);
             txtDescricaoRaca = view.findViewById(R.id.txtDescricaoRaca);
             txtDescricaoRaca.setText(descPets[position]);
+            imgSocialLike = view.findViewById(R.id.SocialLike);
+
+
             return view;
         }
     }

@@ -8,29 +8,27 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-public class PerfilActivity extends AppCompatActivity {
+public class FazerPublicacaoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_perfil);
+        setContentView(R.layout.activity_fazer_publicacao);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_perfil, menu);
+        inflater.inflate(R.menu.menu_upload, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.mpVoltar:
-                startActivity(new Intent(PerfilActivity.this, MenuActivity.class));
-
+            case R.id.muVoltar:
+                startActivity(new Intent(FazerPublicacaoActivity.this, BuscarActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }

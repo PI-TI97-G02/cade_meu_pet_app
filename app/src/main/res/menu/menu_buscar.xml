@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:title="Compartilhar"
-        app:showAsAction="always"
-        android:id="@+id/mbCompartilhar"
-        android:icon="@drawable/ic_baseline_share_">
-
-    </item>
 
 
     <item
@@ -26,10 +19,10 @@
 
     </item>
     <item
-        android:title="Voltar"
-        app:showAsAction="always"
         android:id="@+id/mbVoltar"
-        android:icon="@drawable/ic_baseline_arrow_backss_">
+        android:icon="@drawable/ic_baseline_arrow_backss_"
+        android:title="Voltar"
+        app:showAsAction="always">
 
     </item>
 

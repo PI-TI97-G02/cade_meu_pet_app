@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.sax.StartElementListener;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,7 +23,7 @@ public class BuscarActivity extends AppCompatActivity {
     ListView listView;
     String nomebPets[] = {"Dolly", "Milla", "Fenix", "Simba"};
     int imagensbPets[] = {R.drawable.dolly_app, R.drawable.milla_app, R.drawable.fenix_app, R.drawable.simba_app};
-    String descbPets[] = {"Lhasa - 13 anos. Campo Limpo Paulista/SP", "Vira Lata - 14 anos. Tatuape/SP", "Vira Lata - 6 anos. Grajau/SP", "Mau egipcio - 4 anos. Taboao da Serra"};
+    String descbPets[] = {"Lhasa - 13 anos. Perdida em Campo Limpo Paulista/SP no bairro Jardim Europa.", "Vira Lata - 14 anos. Perdida em Tatuape/SP no bairro Vila Zilda.", "Vira Lata - 6 anos. Perdida em Grajau/SP no bairro Jardim Edith.", "Mau egipcio - 4 anos. Perdido em Taboao da Serra/SP no bairro Jardim Henriquetta."};
 
 
     @Override
@@ -31,6 +33,18 @@ public class BuscarActivity extends AppCompatActivity {
         listView = findViewById(R.id.ListbPets);
         MyAdapter adapter = new MyAdapter();
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(BuscarActivity.this, PetPerdidoActivity.class);
+                intent.putExtra("nomebPets", nomebPets[position]);
+                intent.putExtra("imagembPets", imagensbPets[position]);
+                intent.putExtra("descbPpet", descbPets[position]);
+
+
+            }
+        });
+
 
     }
 
@@ -45,23 +59,12 @@ public class BuscarActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.mbAdicionar:
-                Adicionar:
-                Toast.makeText(getApplicationContext(),
-
-                        "Cliquei em adicionar",
-                        Toast.LENGTH_SHORT).show();
-                break;
+                startActivity(new Intent(BuscarActivity.this, FazerPublicacaoActivity.class));
             case R.id.mbPesquisar:
                 Pesquisar:
                 Toast.makeText(getApplicationContext(),
 
                         "Cliquei em pesquisar",
-                        Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.mbCompartilhar:
-                Toast.makeText(getApplicationContext(),
-
-                        "Cliquei em Compartilhar",
                         Toast.LENGTH_SHORT).show();
                 break;
             case R.id.mbVoltar:
@@ -89,7 +92,7 @@ public class BuscarActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView imgbPets;
+            ImageView imgbPets, imgBuscarCompartilhar;
             TextView txtbTituloImagem, txtbDescricaoRaca;
             Button btnReport;
 
@@ -101,6 +104,18 @@ public class BuscarActivity extends AppCompatActivity {
             imgbPets.setImageResource(imagensbPets[position]);
             txtbDescricaoRaca = view.findViewById(R.id.txtbDescricaoRaca);
             txtbDescricaoRaca.setText(descbPets[position]);
+            btnReport = view.findViewById(R.id.btnReport);
+            btnReport.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(BuscarActivity.this, PetPerdidoActivity.class));
+                }
+            });
+
+
+            imgBuscarCompartilhar = view.findViewById(R.id.BuscarCompartilhar);
+
+
             return view;
         }
     }
