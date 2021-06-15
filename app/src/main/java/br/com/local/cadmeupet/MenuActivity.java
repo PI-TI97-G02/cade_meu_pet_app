@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
-    Button btnSair;
+    Button btnSair, btnAdotar;
 
 
     @Override
@@ -16,6 +16,15 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         btnSair = findViewById(R.id.btnSair);
+        btnAdotar = findViewById(R.id.btnAdotar);
+
+        btnAdotar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuActivity.this, AdotarPetActivity.class));
+            }
+        });
+
         btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

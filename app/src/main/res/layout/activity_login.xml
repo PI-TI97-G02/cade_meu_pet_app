@@ -20,7 +20,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="388dp"
+        android:layout_height="500dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="15dp"
@@ -67,12 +67,18 @@
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="63dp"
+            android:layout_marginTop="30dp"
             android:text="Login"
             android:textAllCaps="false"
-            android:textSize="25sp">
+            android:textSize="25sp" />
 
-        </Button>
-
+        <Button
+            android:id="@+id/btnFinal"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:text="Sair"
+            android:textAllCaps="false"
+            android:textSize="25sp" />
 
 
         <TextView

@@ -17,8 +17,10 @@ public class Conexao extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE tbPets(" +
-                "nomePet INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "descrição VARCHAR(100));";
+                "nomePet VARCHAR PRIMARY KEY AUTOINCREMENT," +
+                "descrição VARCHAR(100)," +
+                "telefone DECIMAL (9,2),"+
+                "Raca VARCHAR(100));";
         db.execSQL(sql);
 
     }
