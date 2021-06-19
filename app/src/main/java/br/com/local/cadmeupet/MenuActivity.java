@@ -42,6 +42,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void AbrirConfig(View view) {
+        startActivity(new Intent(MenuActivity.this, ConfigActivity.class));
     }
 
     public void AbrirRedeSocial(View view) {
