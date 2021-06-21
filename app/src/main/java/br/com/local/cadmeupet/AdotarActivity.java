@@ -10,18 +10,15 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
-public class AdotarPetActivity extends AppCompatActivity {
-    WebView webView;
+public class AdotarActivity extends AppCompatActivity {
+   WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adotar_pet);
-
-        webView = findViewById(R.id.idWebView);
+        setContentView(R.layout.activity_adotar);
+        webView = findViewById(R.id.WebAdotar);
         webView.loadUrl("https://www.adotepetz.com.br/");
-
-
     }
 
     @Override
@@ -33,11 +30,9 @@ public class AdotarPetActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+        switch (item.getItemId()){
             case R.id.mpVoltar:
-                startActivity(new Intent(getApplicationContext(), MenuActivity.class));
-                finish();
-                break;
+                startActivity(new Intent(AdotarActivity.this, MenuActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
