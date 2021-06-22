@@ -8,14 +8,14 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
-    Button btnSair, btnAdotar;
+    Button btnVoltarMenu, btnAdotar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        btnSair = findViewById(R.id.btnSair);
+        btnVoltarMenu = findViewById(R.id.btnVoltarMenu);
         btnAdotar = findViewById(R.id.btnAdotar);
 
         btnAdotar.setOnClickListener(new View.OnClickListener() {
@@ -25,10 +25,11 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        btnSair.setOnClickListener(new View.OnClickListener() {
+        btnVoltarMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MenuActivity.this, LoginActivity.class));
+                finish();
             }
         });
     }

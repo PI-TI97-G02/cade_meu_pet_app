@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
                 senha = txtSenha.getText().toString();
                 if (email.equals("usuario@sp.senac.br") && senha.equals("senac")) {
                     startActivity(new Intent(LoginActivity.this, MenuActivity.class));
+                    finish();
 
                 } else {
                     Toast.makeText(getApplicationContext(), "Usuário ou senha inválidos!",

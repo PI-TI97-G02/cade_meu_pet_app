@@ -9,14 +9,13 @@
     tools:context=".MenuActivity">
 
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:text="Menu Principal"
         android:textSize="25dp"
-        android:layout_marginTop="20dp"
         android:textStyle="bold">
 
     </TextView>
@@ -34,11 +33,11 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                app:cardBackgroundColor="#17CED4"
-                android:background="#17CED4"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
+                android:background="#17CED4"
                 android:visibility="visible"
+                app:cardBackgroundColor="#17CED4"
                 tools:visibility="visible">
 
                 <LinearLayout
@@ -47,21 +46,21 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/AbrirBuscar"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:onClick="abrirBuscar"
-                        android:id="@+id/AbrirBuscar"
                         android:src="@drawable/logo_app">
 
                     </ImageView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Buscar"
                         android:layout_gravity="center_horizontal"
+                        android:text="Buscar"
                         android:textSize="15sp"
-                        android:textStyle="bold">
-                    </TextView>
+                        android:textStyle="bold"></TextView>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -79,9 +78,9 @@
 
                     <ImageView
                         android:id="@+id/BtnSocial"
-                        android:onClick="AbrirRedeSocial"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
+                        android:onClick="AbrirRedeSocial"
                         android:src="@drawable/pets_app">
 
                     </ImageView>
@@ -89,11 +88,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Rede Social"
                         android:layout_gravity="center_horizontal"
+                        android:text="Rede Social"
                         android:textSize="15sp"
-                        android:textStyle="bold">
-                    </TextView>
+                        android:textStyle="bold"></TextView>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -108,9 +106,9 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                app:cardBackgroundColor="#17CED4"
                 android:layout_width="170dp"
-                android:layout_height="170dp">
+                android:layout_height="170dp"
+                app:cardBackgroundColor="#17CED4">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -118,30 +116,30 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/AbrirPerfil"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:onClick="AbrirPefil"
-                        android:id="@+id/AbrirPerfil"
                         android:src="@drawable/cao_app">
 
                     </ImageView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Perfil"
                         android:layout_gravity="center_horizontal"
+                        android:text="Perfil"
                         android:textSize="15sp"
-                        android:textStyle="bold">
-                    </TextView>
+                        android:textStyle="bold"></TextView>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                app:cardBackgroundColor="#17CED4"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
-                android:layout_marginLeft="30dp">
+                android:layout_marginLeft="30dp"
+                app:cardBackgroundColor="#17CED4">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -149,21 +147,21 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/AbrirConfig"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:onClick="AbrirConfig"
-                        android:id="@+id/AbrirConfig"
                         android:src="@drawable/gatos_app">
 
                     </ImageView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Configurações"
                         android:layout_gravity="center_horizontal"
+                        android:text="Configurações"
                         android:textSize="15sp"
-                        android:textStyle="bold">
-                    </TextView>
+                        android:textStyle="bold"></TextView>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -174,8 +172,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="63dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnAdotar"
@@ -190,11 +188,11 @@
             </Button>
 
             <Button
-                android:id="@+id/btnSair"
+                android:id="@+id/btnVoltarMenu"
                 android:layout_width="180dp"
                 android:layout_height="63dp"
                 android:layout_marginLeft="20dp"
-                android:text="Sair"
+                android:text="Voltar"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="18sp"
